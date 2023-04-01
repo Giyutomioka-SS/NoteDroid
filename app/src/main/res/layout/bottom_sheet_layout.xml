@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomSheetParent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/bottomSheetContainer">
+
+            <ImageView
+                android:id="@+id/bar"
+                android:layout_width="40dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitXY"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/shape_image"
+                tools:ignore="ContentDescription,ImageContrastCheck">
+
+            </ImageView>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_baseline_color_lens_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/google_sans_regular"
+                android:text="@string/choose_color"
+                android:textSize="18sp"
+                android:id="@+id/addColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bar">
+
+            </com.google.android.material.textview.MaterialTextView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addColor">
+
+                <com.thebluealliance.spectrum.SpectrumPalette
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/colorPicker"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:spectrum_autoPadding="true"
+                    app:spectrum_colors="@array/color_picker"
+                    app:spectrum_columnCount="16"
+                    app:spectrum_outlineWidth="0.1dp"
+                    tools:ignore="VisualLintBounds">
+
+                </com.thebluealliance.spectrum.SpectrumPalette>
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
+

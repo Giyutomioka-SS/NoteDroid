@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/noteFragment">
+
+    <fragment
+        android:id="@+id/noteFragment"
+        android:name="com.example.notedroid.fragments.NoteFragment"
+        android:label="fragment_note"
+        tools:layout="@layout/fragment_note" >
+        <action
+            android:id="@+id/action_noteFragment_to_saveOrUpdateFragment"
+            app:destination="@id/saveOrUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saveOrUpdateFragment"
+        android:name="com.example.notedroid.fragments.SaveOrUpdateFragment"
+        android:label="fragment_save_or_update"
+        tools:layout="@layout/fragment_save_or_update" >
+        <action
+            android:id="@+id/action_saveOrUpdateFragment_to_noteFragment"
+            app:destination="@id/noteFragment" />
+
+        <argument android:name="Note"
+            android:defaultValue="@null"
+            app:argType="com.example.notedroid.model.Note"
+            app:nullable="true">
+
+        </argument>
+
+    </fragment>
+
+</navigation>

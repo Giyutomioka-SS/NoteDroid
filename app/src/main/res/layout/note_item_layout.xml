@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:id="@+id/noteItemLayoutParent"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            app:cardCornerRadius="13dp"
+            app:cardElevation="5dp"
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteItemTitle"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteContentItem"
+                    android:layout_below="@+id/noteItemTitle"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/google_sans_medium"
+                    android:maxLines="12"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    tools:text="@string/some_text"
+                    tools:ignore="VisualLintLongText">
+
+                </TextView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/noteDate"
+                    android:layout_below="@+id/noteContentItem"
+                    android:drawableStart="@drawable/ic_outline_calendar_today_24"
+                    android:drawablePadding="6dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:padding="5dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/google_sans_regular"
+                    android:text="dd-mm-yy"
+                    android:drawableTint="@color/black"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textAlignment="textStart"
+                    tools:ignore="HardcodedText">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</layout>

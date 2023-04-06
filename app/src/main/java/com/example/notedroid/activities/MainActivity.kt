@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var noteActivityViewModel: NoteActivityViewModel
     private lateinit var binding: ActivityMainBinding
 
-
-    //hii
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
